@@ -115,10 +115,10 @@ public class ToDoManager {
             return ToDo.builder()
                     .id(resultSet.getLong(1))
                     .title(resultSet.getString(2))
-                    .deadline(sdf.parse(resultSet.getString(3)))
+                    .deadline(resultSet.getString(3) == null ? null : sdf.parse(resultSet.getString(3)))
                     .status(ToDoStatus.valueOf(resultSet.getString(4)))
                     .user(userManager.getById(resultSet.getLong(5)))
-                    .createdDate(sdf.parse(resultSet.getString(6)))
+                    .createdDate(resultSet.getString(6) == null ? null : sdf.parse(resultSet.getString(6)))
                     .build();
         } catch (SQLException e) {
             e.printStackTrace();
