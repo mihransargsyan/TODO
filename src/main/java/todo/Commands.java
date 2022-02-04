@@ -15,13 +15,13 @@ public interface Commands {
     int CHANGE_TODO_STATUS = 6;
     int DELETE_TODO = 7;
 
-    static  void printMainCommands(){
+    static void printMainCommands() {
         System.out.println("Plase input " + EXIT + " for EXIT");
         System.out.println("Plase input " + LOGIN + " for LOGIN");
         System.out.println("Plase input " + REGISTER + " for  REGISTER");
     }
 
-    static void printUserCommands(){
+    static void printUserCommands() {
         System.out.println("Plase input " + LOGOUT + " for LOGOUT");
         System.out.println("Plase input " + ADD_NEW_TODO + " for ADD_NEW_TODO");
         System.out.println("Plase input " + MY_ALL_LIST + " for MY_ALL_LIST");
@@ -31,7 +31,6 @@ public interface Commands {
         System.out.println("Plase input " + CHANGE_TODO_STATUS + " for CHANGE_TODO_STATUS");
         System.out.println("Plase input " + DELETE_TODO + " for DELETE_TODO");
     }
-
 
 
 }
